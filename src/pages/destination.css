@@ -1,0 +1,66 @@
+
+.destination {
+    min-width: 375px;
+    max-width: 100%;
+}
+.destination-title-wrapper {
+    background: rgba(49.0, 132.0, 171.0);
+    color: white;
+    width: 100%;
+    height: 134px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;;
+}
+
+.destination-title {
+    font-size: 24px;  
+    margin: 0;  
+}
+
+.destination-subtitle {
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.destination-image {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.destination-meta-wrapper {
+    background: #F2F2F2;
+    color: #3C5858;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.destination-meta-value {
+    font-size: 24px;
+    margin-right: 2px;
+    display: inline-block;
+}
+
+.destination-meta-title {
+    font-size: 12px;
+}
+
+.destination-description {
+    color: white;
+    padding: 56px 40px;
+}
+
+.destination-description-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.destination-description-text {
+    font-size: 12px;
+    line-height: 2;
+}
