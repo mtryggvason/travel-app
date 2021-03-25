@@ -28,7 +28,7 @@ export const Overview = (props) => {
     const delayMultiplier = clickedIndex === -1 ? 1: 0;
     const style = {position: 'absolute', left: '50%', width: '100%', display: 'flex', justifyContent: 'center'};
     return ( 
-        <>
+        <div style={{marginTop: '48px'}}>
             {clickedIndex === -1 && Object.keys(destinations).map((key, index) => {
             return (<motion.div
                             key={key}
@@ -53,6 +53,6 @@ export const Overview = (props) => {
                 <DestinationCard expanded={expanded} id={clickedIndex} right={clickedIndex % 2 !== 0} {...destinations[selectedKey]}/ >
             </motion.div>)
            }
-        </>
+        </div>
     )
 }
