@@ -14,6 +14,7 @@ export const Destination = (props) => {
     return (
             <motion.div
                 onDoubleClick={() => history.goBack()}
+                initial={{ y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3}}
                 exit={{y: -500, opacity: 0 }}
              className="destination">
