@@ -12,10 +12,11 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "serve": "^11.3.2",
+    "serve-spa": "^1.1.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "serve build",
+    "start": "serve-spa build",
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "test": "react-scripts test",
