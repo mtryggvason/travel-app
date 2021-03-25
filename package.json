@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "framer-motion": "^4.0.3",
+    "http-server-spa": "^1.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -16,7 +17,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "serve-spa build",
+    "start": "http-server-spa build",
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "test": "react-scripts test",
