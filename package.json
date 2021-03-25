@@ -17,7 +17,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "http-server-spa build",
+    "start": "serve build",
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "test": "react-scripts test",
