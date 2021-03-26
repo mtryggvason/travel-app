@@ -5,7 +5,8 @@ import {
 import { motion } from "framer-motion"
 import { DestinationCard } from '../components/destinationCard';
 import { destinations } from '../data/destinations';
-
+const SPACING_TOP = 48;
+const MARGIN_TOP = 24;
 
 export const Overview = (props) => {
     const history = useHistory();
@@ -23,12 +24,12 @@ export const Overview = (props) => {
     const handleClick = (index, id, event) => {
         setClickedIndex(index);
         setSelectedKey(id)
-        setPosition([event.currentTarget.offsetLeft, event.currentTarget.offsetTop - 25])
+        setPosition([event.currentTarget.offsetLeft, event.currentTarget.offsetTop - MARGIN_TOP])
     }
     const delayMultiplier = clickedIndex === -1 ? 1: 0;
     const style = {position: 'absolute', left: '50%', width: '100%', display: 'flex', justifyContent: 'center'};
     return ( 
-        <div style={{marginTop: '48px'}}>
+        <div style={{marginTop: SPACING_TOP + 'px'}}>
             {clickedIndex === -1 && Object.keys(destinations).map((key, index) => {
             return (<motion.div
                             key={key}
@@ -46,7 +47,7 @@ export const Overview = (props) => {
                 style={style}
                 key={selectedKey}
                 initial={{ y: position[1], x: '-50%'}}
-                animate={{y: 0,  x: '-50%' }}
+                animate={{y: -SPACING_TOP - MARGIN_TOP,  x: '-50%' }}
                 transition={{ duration: 0.5,}}
                 onAnimationComplete={() => setExpanded(true)}
                 > 
