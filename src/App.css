@@ -5,6 +5,7 @@ body {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .card {
@@ -33,17 +34,28 @@ body {
 }
 
 .card__expanded  .card-content{
-     background: rgba(49.0, 132.0, 171.0);
-    color: white;
-    width: 100%;
-    height: 134px;
-    padding: 24px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    top: 0;
-    box-sizing: border-box;
+  background: rgba(49.0, 132.0, 171.0);
+  color: white;
+  width: 100%;
+  height: 134px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.card__expanded  .card-title {
+  margin-top: -10px;
+}
+
+
+.card__expanded  .card-subtitle {
+  font-size: 12px;
+  margin: 0;
+  margin-top: 16px;
 }
 
 
@@ -71,10 +83,14 @@ body {
 
 .card-title {
   font-size: 24px;
+  font-weight: 400;
   margin: 0;
 }
+
+
 .card-subtitle {
   font-size: 12px;
+  font-weight: 400;
   margin: 0;
   margin-top: 26px;
 }
