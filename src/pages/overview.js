@@ -29,7 +29,7 @@ export const Overview = (props) => {
     const delayMultiplier = clickedIndex === -1 ? 1: 0;
     const style = {position: 'absolute', left: '50%', width: '100%', display: 'flex', justifyContent: 'center'};
     return ( 
-        <div style={{marginTop: SPACING_TOP + 'px'}}>
+        <div style={{marginTop: 48 + 'px'}}>
             {clickedIndex === -1 && Object.keys(destinations).map((key, index) => {
             return (<motion.div
                             key={key}
@@ -47,7 +47,7 @@ export const Overview = (props) => {
                 style={style}
                 key={selectedKey}
                 initial={{ y: position[1], x: '-50%'}}
-                animate={{y: -SPACING_TOP - MARGIN_TOP,  x: '-50%' }}
+                animate={{y: (-SPACING_TOP),  x: '-50%' }}
                 transition={{ duration: 0.5,}}
                 onAnimationComplete={() => setExpanded(true)}
                 > 

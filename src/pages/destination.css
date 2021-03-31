@@ -17,11 +17,13 @@
 
 .destination-title {
     font-size: 24px;  
+    font-weight: 400;
     margin: 0;  
 }
 
 .destination-subtitle {
     font-size: 12px;
+    font-weight: 400;
     margin-top: 16px;
 }
 
