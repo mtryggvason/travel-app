@@ -4,6 +4,7 @@ import {
   useHistory
 } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion"
+import  Hammer from "react-hammerjs"
 
 import { destinations } from '../data/destinations';
 import './destination.css'
@@ -11,24 +12,27 @@ export const Destination = (props) => {
     const {id} = useParams();
     const history = useHistory();
     const destination = destinations[id];
+    const goBack = (event,direction) => {
+        history.goBack();
+    }
     return (
+        <Hammer onDoubleTap={goBack} direction={'DIRECTION_RIGHT'} onSwipe={goBack}>
             <motion.div
-                onDoubleClick={() => history.goBack()}
                 initial={{ y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3}}
                 exit={{y: -500, opacity: 0 }}
-             className="destination">
+                className="destination">
                 <div className="destination-title-wrapper">
                     <h1 className="destination-title">{destination.title}</h1>
                     <h2 className="destination-subtitle">{destination.city}</h2>
                 </div>
-                <img src={destination.img} className="destination-image"/>
+                <motion.img src={destination.img} className="destination-image"/>
                 <motion.div 
                     initial={{ opacity: 0, y: -70 }}
                     animate={{ opacity: 1, y:-3 }}
                     exit={{y: -70 }}
 
-                transition={{ duration: 0.2}}
+                transition={{ duration: 0.2, delay: 0.2}}
                     className="destination-meta-wrapper">
                     {destination.meta.map(meta => {
                         return(<div>
@@ -47,6 +51,7 @@ export const Destination = (props) => {
                     <p className="destination-description-text" >{destination.description}</p>
                 </motion.div>
             </motion.div>
+        </Hammer>
 
     )
 }
