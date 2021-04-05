@@ -42,7 +42,7 @@ I ended up implementing the second idea, since it was more feasible than version
 
 ## Data
 
-The app contains duplicate entries, since I wanted the list to be scrollable. The first three destinations contains different details such as yearly visitors since I thought it might be usefule for user testing.
+The app contains duplicate entries, since I wanted the list to be scrollable. The first three destinations contains different details such as yearly visitors since I thought it might be useful for user testing.
 
 
 ## Next Steps
